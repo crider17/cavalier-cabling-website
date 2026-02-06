@@ -17,7 +17,7 @@ export default function Services() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {SERVICES.items.map((service, i) => (
-            <AnimateOnScroll key={service.title} delay={delays[i]}>
+            <AnimateOnScroll key={service.title} delay={delays[i]} className="h-full">
               <ServiceCard
                 icon={service.icon}
                 title={service.title}

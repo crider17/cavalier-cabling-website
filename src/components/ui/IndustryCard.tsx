@@ -26,7 +26,7 @@ export default function IndustryCard({
 
   return (
     <div
-      className={`group relative overflow-hidden rounded-xl bg-gradient-to-br ${gradient} p-6 hover:scale-[1.02] transition-all duration-300`}
+      className={`group relative overflow-hidden rounded-xl bg-gradient-to-br ${gradient} p-6 h-full hover:scale-[1.02] transition-all duration-300`}
     >
       <div className={`h-1 w-12 ${accent} rounded-full mb-4`} />
 

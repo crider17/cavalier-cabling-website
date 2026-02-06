@@ -34,14 +34,16 @@ export default function CertBadge({
   if (type === "shield") {
     return (
       <div className="flex flex-col items-center">
-        <div
-          className={`relative w-24 h-28 ${colors.bg} ${colors.border} border-2 flex flex-col items-center justify-center`}
-          style={{
-            clipPath:
-              "polygon(50% 0%, 100% 10%, 100% 75%, 50% 100%, 0% 75%, 0% 10%)",
-          }}
-        >
-          <span className={`text-xs font-bold ${colors.text}`}>{title}</span>
+        <div className="h-24 flex items-center justify-center">
+          <div
+            className={`relative w-24 h-24 ${colors.bg} ${colors.border} border-2 flex flex-col items-center justify-center`}
+            style={{
+              clipPath:
+                "polygon(50% 0%, 100% 10%, 100% 75%, 50% 100%, 0% 75%, 0% 10%)",
+            }}
+          >
+            <span className={`text-xs font-bold ${colors.text}`}>{title}</span>
+          </div>
         </div>
         <p className="mt-2 text-xs text-gray-500 font-medium">{subtitle}</p>
       </div>
@@ -50,12 +52,14 @@ export default function CertBadge({
 
   return (
     <div className="flex flex-col items-center">
-      <div
-        className={`w-24 h-24 rounded-full ${colors.border} border-[3px] ${colors.bg} flex flex-col items-center justify-center`}
-      >
-        <span className={`text-xs font-bold ${colors.text} text-center leading-tight px-2`}>
-          {title}
-        </span>
+      <div className="h-24 flex items-center justify-center">
+        <div
+          className={`w-24 h-24 rounded-full ${colors.border} border-[3px] ${colors.bg} flex flex-col items-center justify-center`}
+        >
+          <span className={`text-xs font-bold ${colors.text} text-center leading-tight px-2`}>
+            {title}
+          </span>
+        </div>
       </div>
       <p className="mt-2 text-xs text-gray-500 font-medium">{subtitle}</p>
     </div>

@@ -30,7 +30,7 @@ export default function ServiceCard({
   const Icon = iconMap[icon];
 
   return (
-    <div className="group bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 hover:border-t-4 hover:border-t-brand-orange transition-all duration-200">
+    <div className="group h-full bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 hover:border-t-4 hover:border-t-brand-orange transition-all duration-200">
       <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center mb-4">
         <Icon className="w-6 h-6 text-brand-orange" />
       </div>

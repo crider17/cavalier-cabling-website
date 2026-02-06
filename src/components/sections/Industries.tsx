@@ -21,7 +21,7 @@ export default function Industries() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {INDUSTRIES.items.map((industry, i) => (
-            <AnimateOnScroll key={industry.title} delay={delays[i]}>
+            <AnimateOnScroll key={industry.title} delay={delays[i]} className="h-full">
               <IndustryCard
                 title={industry.title}
                 description={industry.description}

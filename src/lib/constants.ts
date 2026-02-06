@@ -156,7 +156,7 @@ export const CONTACT = {
   location: "Port Huron, MI",
   email: "info@cavaliercabling.com",
   michiganHeading: "Built In Michigan",
-  michiganSubtitle: "Proudly manufacturing in Port Huron since day one.",
+  michiganSubtitle: "Proudly manufacturing in Port Huron.",
 };
 
 export const SEO = {
