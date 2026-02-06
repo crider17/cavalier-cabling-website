@@ -1,5 +1,3 @@
-export const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
-
 export const NAV_LINKS = [
   { label: "Home", href: "#hero" },
   { label: "Capabilities", href: "#services" },

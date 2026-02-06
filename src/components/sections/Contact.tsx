@@ -4,7 +4,7 @@ import { useState, FormEvent } from "react";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import ContactInfoCard from "@/components/ui/ContactInfoCard";
 import Button from "@/components/ui/Button";
-import { CONTACT, FORMSPREE_ENDPOINT } from "@/lib/constants";
+import { CONTACT } from "@/lib/constants";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -16,13 +16,21 @@ export default function Contact() {
     setStatus("submitting");
 
     const form = e.currentTarget;
-    const data = new FormData(form);
+    const formData = new FormData(form);
+
+    const body = {
+      name: formData.get("name"),
+      organization: formData.get("organization"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      message: formData.get("message"),
+    };
 
     try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
       });
 
       if (res.ok) {
@@ -82,15 +90,6 @@ export default function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  {/* Honeypot */}
-                  <input
-                    type="text"
-                    name="_gotcha"
-                    className="hidden"
-                    tabIndex={-1}
-                    autoComplete="off"
-                  />
-
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                       <label
