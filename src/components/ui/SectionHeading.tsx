@@ -13,11 +13,11 @@ export default function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <div className={center ? "text-center" : ""}>
-      <p className="text-sm font-semibold uppercase tracking-wider text-brand-orange mb-3">
+      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-orange mb-4">
         {label}
       </p>
       <h2
-        className={`text-3xl font-extrabold md:text-4xl ${
+        className={`font-display text-3xl md:text-4xl lg:text-[2.75rem] font-800 uppercase tracking-tight leading-tight ${
           light ? "text-white" : "text-brand-black"
         }`}
       >

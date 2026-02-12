@@ -9,13 +9,13 @@ const delays = ["delay-100", "delay-200", "delay-300", "delay-100", "delay-200",
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 md:py-28 bg-brand-gray-light">
+    <section id="services" className="py-20 md:py-28 bg-brand-gray-light relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimateOnScroll className="mb-14">
+        <AnimateOnScroll className="mb-16">
           <SectionHeading label={SERVICES.label} heading={SERVICES.heading} />
         </AnimateOnScroll>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {SERVICES.items.map((service, i) => (
             <AnimateOnScroll key={service.title} delay={delays[i]} className="h-full">
               <ServiceCard

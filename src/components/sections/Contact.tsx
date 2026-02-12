@@ -49,7 +49,7 @@ export default function Contact() {
       {/* Built In Michigan banner */}
       <div className="relative bg-brand-gray-dark py-16 overflow-hidden">
         {/* City skyline silhouette */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 opacity-[0.06]">
+        <div className="absolute bottom-0 left-0 right-0 h-24 opacity-[0.04]">
           <svg
             viewBox="0 0 1200 120"
             preserveAspectRatio="none"
@@ -59,12 +59,24 @@ export default function Contact() {
           </svg>
         </div>
 
+        {/* Subtle grid */}
+        <div
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)
+            `,
+            backgroundSize: "60px 60px",
+          }}
+        />
+
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-3">
+            <h2 className="font-display text-3xl md:text-5xl font-800 uppercase text-white mb-3 tracking-tight">
               {CONTACT.michiganHeading}
             </h2>
-            <p className="text-gray-400">{CONTACT.michiganSubtitle}</p>
+            <p className="text-gray-400 tracking-wide">{CONTACT.michiganSubtitle}</p>
           </AnimateOnScroll>
         </div>
       </div>
@@ -75,16 +87,16 @@ export default function Contact() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Form */}
             <AnimateOnScroll>
-              <h2 className="text-2xl font-bold text-brand-black mb-6">
+              <h2 className="font-display text-2xl font-700 uppercase tracking-wide text-brand-black mb-8">
                 {CONTACT.formHeading}
               </h2>
 
               {status === "success" ? (
-                <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
-                  <p className="text-green-800 font-semibold text-lg mb-2">
+                <div className="bg-brand-green/5 border border-brand-green/20 rounded-2xl p-8 text-center">
+                  <p className="text-brand-green font-semibold text-lg mb-2">
                     Thank you!
                   </p>
-                  <p className="text-green-600">
+                  <p className="text-gray-500">
                     We&apos;ve received your message and will get back to you shortly.
                   </p>
                 </div>
@@ -94,7 +106,7 @@ export default function Contact() {
                     <div>
                       <label
                         htmlFor="name"
-                        className="block text-sm font-medium text-gray-700 mb-1"
+                        className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2"
                       >
                         Name
                       </label>
@@ -103,13 +115,13 @@ export default function Contact() {
                         id="name"
                         name="name"
                         required
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-brand-gray-light text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-colors"
+                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-brand-gray-light/60 text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange/50 transition-all"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="organization"
-                        className="block text-sm font-medium text-gray-700 mb-1"
+                        className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2"
                       >
                         Organization
                       </label>
@@ -117,7 +129,7 @@ export default function Contact() {
                         type="text"
                         id="organization"
                         name="organization"
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-brand-gray-light text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-colors"
+                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-brand-gray-light/60 text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange/50 transition-all"
                       />
                     </div>
                   </div>
@@ -126,7 +138,7 @@ export default function Contact() {
                     <div>
                       <label
                         htmlFor="email"
-                        className="block text-sm font-medium text-gray-700 mb-1"
+                        className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2"
                       >
                         Email
                       </label>
@@ -135,13 +147,13 @@ export default function Contact() {
                         id="email"
                         name="email"
                         required
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-brand-gray-light text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-colors"
+                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-brand-gray-light/60 text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange/50 transition-all"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="phone"
-                        className="block text-sm font-medium text-gray-700 mb-1"
+                        className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2"
                       >
                         Phone
                       </label>
@@ -149,7 +161,7 @@ export default function Contact() {
                         type="tel"
                         id="phone"
                         name="phone"
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-brand-gray-light text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-colors"
+                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-brand-gray-light/60 text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange/50 transition-all"
                       />
                     </div>
                   </div>
@@ -157,7 +169,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium text-gray-700 mb-1"
+                      className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2"
                     >
                       Tell us about your project
                     </label>
@@ -166,7 +178,7 @@ export default function Contact() {
                       name="message"
                       rows={5}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-brand-gray-light text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-colors resize-none"
+                      className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-brand-gray-light/60 text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange/30 focus:border-brand-orange/50 transition-all resize-none"
                     />
                   </div>
 
@@ -191,7 +203,7 @@ export default function Contact() {
 
             {/* Info cards */}
             <AnimateOnScroll delay="delay-200">
-              <h2 className="text-sm font-semibold uppercase tracking-wider text-brand-orange mb-6">
+              <h2 className="font-display text-xs font-700 uppercase tracking-widest text-brand-orange mb-8">
                 {CONTACT.infoHeading}
               </h2>
 

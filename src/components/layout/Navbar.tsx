@@ -15,7 +15,6 @@ export default function Navbar() {
       setScrolled(window.scrollY > 50);
     };
 
-    // Track active section
     const sections = NAV_LINKS.map((l) => l.href.replace("#", ""));
     const observers: IntersectionObserver[] = [];
 
@@ -47,9 +46,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm"
+          ? "bg-white/95 backdrop-blur-lg shadow-[0_1px_0_0_rgba(232,96,44,0.15),0_4px_20px_-4px_rgba(0,0,0,0.08)]"
           : "bg-transparent"
       }`}
     >
@@ -66,36 +65,39 @@ export default function Navbar() {
               priority
             />
             <span
-              className={`hidden sm:block text-sm font-bold tracking-wide transition-colors duration-300 ${
+              className={`hidden sm:block font-display text-sm font-700 uppercase tracking-wider transition-colors duration-300 ${
                 scrolled ? "text-brand-black" : "text-white"
               }`}
             >
-              CAVALIER CABLING LLC
+              Cavalier Cabling
             </span>
           </a>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-1">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors duration-200 ${
+                className={`relative px-4 py-2 text-sm font-medium tracking-wide transition-all duration-300 ${
                   activeSection === link.href
                     ? "text-brand-orange"
                     : scrolled
-                    ? "text-gray-700 hover:text-brand-orange"
-                    : "text-white/80 hover:text-white"
+                    ? "text-gray-600 hover:text-brand-black"
+                    : "text-white/70 hover:text-white"
                 }`}
               >
                 {link.label}
+                {activeSection === link.href && (
+                  <span className="absolute bottom-0 left-4 right-4 h-[2px] bg-brand-orange rounded-full" />
+                )}
               </a>
             ))}
           </div>
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 rounded-lg transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -122,16 +124,16 @@ export default function Navbar() {
           mobileOpen ? "max-h-64" : "max-h-0"
         }`}
       >
-        <div className="bg-white/95 backdrop-blur-md border-t border-gray-100 px-4 py-4 space-y-3">
+        <div className="bg-white/98 backdrop-blur-lg border-t border-gray-100 px-4 py-3 space-y-1">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className={`block text-sm font-medium py-2 ${
+              className={`block text-sm font-medium py-2.5 px-3 rounded-lg transition-all ${
                 activeSection === link.href
-                  ? "text-brand-orange"
-                  : "text-gray-700 hover:text-brand-orange"
+                  ? "text-brand-orange bg-brand-orange/5"
+                  : "text-gray-700 hover:text-brand-orange hover:bg-gray-50"
               }`}
             >
               {link.label}

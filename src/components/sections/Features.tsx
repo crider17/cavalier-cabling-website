@@ -6,11 +6,17 @@ import { FEATURES } from "@/lib/constants";
 
 const iconMap = { Zap, GitBranch, Shield } as const;
 
+const titles = [
+  "Full-Scale Production",
+  "Engineering Partnership",
+  "Quality Assured",
+];
+
 export default function Features() {
   return (
-    <section id="features" className="py-20 md:py-28 bg-white">
+    <section id="features" className="py-20 md:py-28 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-10 md:gap-16">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           {FEATURES.map((feature, i) => {
             const Icon = iconMap[feature.icon];
             return (
@@ -18,11 +24,14 @@ export default function Features() {
                 key={i}
                 delay={i === 0 ? "delay-100" : i === 1 ? "delay-200" : "delay-300"}
               >
-                <div className="text-center">
-                  <div className="w-14 h-14 rounded-full bg-brand-orange/10 flex items-center justify-center mx-auto mb-5">
-                    <Icon className="w-7 h-7 text-brand-orange" />
+                <div className="text-center group">
+                  <div className="w-16 h-16 rounded-2xl bg-brand-orange/[0.07] border border-brand-orange/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-brand-orange/[0.12] group-hover:border-brand-orange/20 transition-all duration-300">
+                    <Icon className="w-7 h-7 text-brand-orange" strokeWidth={1.5} />
                   </div>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="font-display text-lg font-700 uppercase tracking-wide text-brand-black mb-3">
+                    {titles[i]}
+                  </h3>
+                  <p className="text-gray-500 leading-relaxed text-[0.95rem]">
                     {feature.text}
                   </p>
                 </div>

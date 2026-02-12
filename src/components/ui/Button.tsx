@@ -14,11 +14,11 @@ interface ButtonProps {
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-brand-orange text-white hover:bg-brand-orange-dark",
+    "bg-brand-orange text-white hover:bg-brand-orange-dark shadow-[0_2px_12px_rgba(232,96,44,0.25)] hover:shadow-[0_4px_20px_rgba(232,96,44,0.35)]",
   outline:
-    "border-2 border-white text-white hover:bg-white/10",
+    "border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/5",
   "white-outline":
-    "border-2 border-white text-white hover:bg-white hover:text-brand-orange",
+    "border-2 border-white/40 text-white hover:bg-white hover:text-brand-orange hover:border-white",
 };
 
 export default function Button({
@@ -31,7 +31,7 @@ export default function Button({
   onClick,
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center px-8 py-3 rounded-md font-semibold text-sm tracking-wide transition-all duration-200 cursor-pointer";
+    "inline-flex items-center justify-center px-8 py-3.5 rounded-xl font-semibold text-sm tracking-wider uppercase transition-all duration-300 cursor-pointer";
 
   const classes = clsx(base, variants[variant], className);
 

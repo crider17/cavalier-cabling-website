@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Barlow, Barlow_Condensed } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { SEO } from "@/lib/constants";
 
-const inter = Inter({
+const barlow = Barlow({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-barlow",
+  display: "swap",
+});
+
+const barlowCondensed = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-barlow-condensed",
   display: "swap",
 });
 
@@ -68,7 +75,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${barlow.variable} ${barlowCondensed.variable}`}>
       <head>
         <script
           type="application/ld+json"

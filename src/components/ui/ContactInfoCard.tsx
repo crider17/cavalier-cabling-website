@@ -22,9 +22,9 @@ export default function ContactInfoCard({
   const Icon = iconMap[type];
 
   const content = (
-    <div className="flex items-start gap-4 p-5 rounded-xl bg-brand-gray-light hover:shadow-md transition-shadow duration-200">
-      <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center shrink-0">
-        <Icon className="w-5 h-5 text-brand-orange" />
+    <div className="group flex items-start gap-4 p-5 rounded-xl bg-brand-gray-light/60 border border-gray-100 hover:border-brand-orange/15 hover:bg-brand-orange/[0.02] transition-all duration-300">
+      <div className="w-11 h-11 rounded-xl bg-brand-orange/[0.07] border border-brand-orange/10 flex items-center justify-center shrink-0 group-hover:bg-brand-orange group-hover:border-brand-orange transition-all duration-300">
+        <Icon className="w-5 h-5 text-brand-orange group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
       </div>
       <div>
         <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1">

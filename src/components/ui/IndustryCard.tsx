@@ -26,15 +26,18 @@ export default function IndustryCard({
 
   return (
     <div
-      className={`group relative overflow-hidden rounded-xl bg-gradient-to-br ${gradient} p-6 h-full hover:scale-[1.02] transition-all duration-300`}
+      className={`group relative overflow-hidden rounded-2xl bg-gradient-to-br ${gradient} p-7 h-full hover:scale-[1.02] transition-all duration-400`}
     >
-      <div className={`h-1 w-12 ${accent} rounded-full mb-4`} />
+      {/* Top accent bar */}
+      <div className={`h-[2px] w-10 ${accent} rounded-full mb-5`} />
 
-      {/* Icon watermark */}
-      <Icon className="absolute -bottom-4 -right-4 w-28 h-28 text-white/[0.04] group-hover:text-white/[0.08] transition-colors duration-300" />
+      {/* Watermark icon */}
+      <Icon className="absolute -bottom-3 -right-3 w-24 h-24 text-white/[0.03] group-hover:text-white/[0.07] transition-all duration-500" strokeWidth={1} />
 
-      <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
-      <p className="text-gray-300 text-sm leading-relaxed relative z-10">
+      <h3 className="font-display text-xl font-700 uppercase tracking-wide text-white mb-3">
+        {title}
+      </h3>
+      <p className="text-gray-300/90 text-sm leading-relaxed relative z-10">
         {description}
       </p>
     </div>
