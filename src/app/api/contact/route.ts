@@ -67,7 +67,7 @@ export async function POST(request: Request) {
           <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
 
           <p style="color: #999; font-size: 12px;">
-            Sent from the Cavalier Cabling website at ${new Date().toLocaleString()}
+            Sent from the Cavalier Cabling website at ${new Date().toLocaleString("en-US", { timeZone: "America/New_York" })}
           </p>
         </div>
       `,
