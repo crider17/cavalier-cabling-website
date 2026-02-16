@@ -34,37 +34,37 @@ export const SERVICES = {
     "From concept through production — precision-built cabling for demanding applications.",
   items: [
     {
-      icon: "Cable" as const,
+      icon: "CableAssembly" as const,
       title: "Custom Cable Assemblies",
       description:
         "Application-specific cable assemblies engineered for your exact requirements, including multi-conductor, coaxial, RF, and high-power configurations.",
     },
     {
-      icon: "Workflow" as const,
+      icon: "WireHarness" as const,
       title: "Wire Harness Manufacturing",
       description:
         "Complete wire harness solutions from prototype through production, with full documentation packages and first article inspection reports.",
     },
     {
-      icon: "Shield" as const,
+      icon: "MilSpecConnector" as const,
       title: "MIL-Spec & Aerospace Cabling",
       description:
         "Cable assemblies built to MIL-DTL-38999, MIL-DTL-26482, and other military specifications with full traceability and compliance documentation.",
     },
     {
-      icon: "Plug" as const,
+      icon: "ConnectorTermination" as const,
       title: "Connector Termination & Overmolding",
       description:
         "Precision termination services for D-Sub, circular, rectangular, and custom connectors with optional overmolding for environmental protection.",
     },
     {
-      icon: "PenTool" as const,
+      icon: "Engineering" as const,
       title: "Engineering & Prototyping",
       description:
         "Collaborative design support including DFM analysis, 3D modeling, material selection, and rapid prototyping to validate your designs before production.",
     },
     {
-      icon: "ClipboardCheck" as const,
+      icon: "Testing" as const,
       title: "Testing & Quality Assurance",
       description:
         "Comprehensive testing including continuity, hi-pot, insulation resistance, and pull force testing with detailed test reports and certifications.",
@@ -80,7 +80,7 @@ export const INDUSTRIES = {
       title: "Defense",
       description:
         "Mission-critical cabling for ground vehicles, communications systems, weapon platforms, and field-deployable equipment. ITAR registered.",
-      icon: "Shield" as const,
+      icon: "DefenseVehicle" as const,
       gradient: "from-slate-900 via-slate-800 to-slate-900",
       accent: "bg-brand-orange",
     },
@@ -88,7 +88,7 @@ export const INDUSTRIES = {
       title: "Aerospace",
       description:
         "Flight-qualified cable assemblies for avionics, flight controls, engine systems, and ground support equipment. AS9100 certified.",
-      icon: "Plane" as const,
+      icon: "AerospaceJet" as const,
       gradient: "from-blue-950 via-indigo-900 to-blue-950",
       accent: "bg-brand-blue",
     },
@@ -96,7 +96,7 @@ export const INDUSTRIES = {
       title: "Industrial",
       description:
         "Ruggedized wire harnesses for automation equipment, robotics, heavy machinery, and harsh-environment industrial applications.",
-      icon: "Wrench" as const,
+      icon: "IndustrialRoboticArm" as const,
       gradient: "from-gray-800 via-gray-700 to-gray-800",
       accent: "bg-brand-green",
     },
@@ -104,7 +104,7 @@ export const INDUSTRIES = {
       title: "Automotive",
       description:
         "High-performance cabling for specialty and armored vehicles, EV platforms, motorsport applications, and aftermarket systems.",
-      icon: "Car" as const,
+      icon: "AutomotiveVehicle" as const,
       gradient: "from-stone-800 via-amber-950 to-stone-800",
       accent: "bg-brand-orange",
     },

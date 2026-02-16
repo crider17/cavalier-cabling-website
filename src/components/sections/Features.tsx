@@ -3,6 +3,7 @@
 import { Zap, GitBranch, Shield } from "lucide-react";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import { FEATURES } from "@/lib/constants";
+import FeatureConnectorLines from "@/components/svg/FeatureConnectorLines";
 
 const iconMap = { Zap, GitBranch, Shield } as const;
 
@@ -15,6 +16,11 @@ const titles = [
 export default function Features() {
   return (
     <section id="features" className="py-20 md:py-28 bg-white relative">
+      {/* Connector lines between feature columns (desktop only) */}
+      <div className="hidden md:block absolute inset-x-0 top-1/2 -translate-y-1/2 pointer-events-none">
+        <FeatureConnectorLines className="w-full h-auto text-brand-black" />
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           {FEATURES.map((feature, i) => {

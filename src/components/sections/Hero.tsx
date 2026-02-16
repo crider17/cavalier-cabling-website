@@ -1,6 +1,8 @@
 import { ChevronDown } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { HERO } from "@/lib/constants";
+import ConnectorIllustration from "@/components/svg/ConnectorIllustration";
+import CircuitTraces from "@/components/svg/CircuitTraces";
 
 export default function Hero() {
   return (
@@ -48,6 +50,9 @@ export default function Hero() {
           }}
         />
 
+        {/* Circuit traces overlay */}
+        <CircuitTraces className="absolute inset-0 w-full h-full text-white opacity-[0.06]" />
+
         {/* Bottom gradient fade */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-brand-gray-dark to-transparent" />
       </div>
@@ -58,28 +63,38 @@ export default function Hero() {
       <div className="absolute bottom-24 right-8 w-16 h-[1px] bg-brand-orange/20 hidden lg:block" />
       <div className="absolute bottom-24 right-8 w-[1px] h-16 bg-brand-orange/20 hidden lg:block" />
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p className="animate-hero-fade animate-hero-fade-1 text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-brand-orange/80 mb-8">
-          {HERO.subtitle}
-        </p>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex flex-col lg:flex-row items-center lg:gap-12">
+          {/* Text content - left side on desktop */}
+          <div className="flex-1 text-center lg:text-left">
+            <p className="animate-hero-fade animate-hero-fade-1 text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-brand-orange/80 mb-8">
+              {HERO.subtitle}
+            </p>
 
-        <h1 className="animate-hero-fade animate-hero-fade-2 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-800 uppercase text-white leading-[0.95] tracking-tight mb-8">
-          {HERO.heading}
-        </h1>
+            <h1 className="animate-hero-fade animate-hero-fade-2 font-display text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-800 uppercase text-white leading-[0.95] tracking-tight mb-8">
+              {HERO.heading}
+            </h1>
 
-        <div className="animate-hero-line flex items-center justify-center gap-3 mb-12">
-          <div className="h-[2px] w-12 bg-brand-orange/40" />
-          <div className="h-[2px] w-20 bg-brand-orange" />
-          <div className="h-[2px] w-12 bg-brand-orange/40" />
-        </div>
+            <div className="animate-hero-line flex items-center justify-center lg:justify-start gap-3 mb-12">
+              <div className="h-[2px] w-12 bg-brand-orange/40" />
+              <div className="h-[2px] w-20 bg-brand-orange" />
+              <div className="h-[2px] w-12 bg-brand-orange/40" />
+            </div>
 
-        <div className="animate-hero-fade animate-hero-fade-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button variant="primary" href="#contact">
-            {HERO.ctaPrimary}
-          </Button>
-          <Button variant="outline" href="#services">
-            {HERO.ctaSecondary}
-          </Button>
+            <div className="animate-hero-fade animate-hero-fade-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <Button variant="primary" href="#contact">
+                {HERO.ctaPrimary}
+              </Button>
+              <Button variant="outline" href="#services">
+                {HERO.ctaSecondary}
+              </Button>
+            </div>
+          </div>
+
+          {/* Connector illustration - right side on desktop */}
+          <div className="hidden md:flex items-center justify-center flex-shrink-0 animate-hero-fade animate-hero-fade-5">
+            <ConnectorIllustration className="w-72 lg:w-80 xl:w-96 h-72 lg:h-80 xl:h-96 text-white/70 animate-rotate-slow" />
+          </div>
         </div>
       </div>
 

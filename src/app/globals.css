@@ -105,6 +105,74 @@ body {
 }
 
 /* ═══════════════════════════════════════ */
+/* Connector illustration animations       */
+/* ═══════════════════════════════════════ */
+
+.animate-connector-pulse {
+  animation: connectorPulse 3s ease-in-out infinite;
+}
+
+@keyframes connectorPulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.animate-rotate-slow {
+  animation: rotateSlow 60s linear infinite;
+}
+
+@keyframes rotateSlow {
+  to { transform: rotate(360deg); }
+}
+
+/* ═══════════════════════════════════════ */
+/* Circuit trace draw-on animation         */
+/* ═══════════════════════════════════════ */
+
+.trace-draw {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: traceDraw 2.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes traceDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+.trace-delay-1 { animation-delay: 0.2s; }
+.trace-delay-2 { animation-delay: 0.5s; }
+.trace-delay-3 { animation-delay: 0.8s; }
+.trace-delay-4 { animation-delay: 1.1s; }
+.trace-delay-5 { animation-delay: 1.4s; }
+.trace-delay-6 { animation-delay: 1.7s; }
+
+/* ═══════════════════════════════════════ */
+/* Michigan pin pulse animation            */
+/* ═══════════════════════════════════════ */
+
+.animate-pin-pulse {
+  animation: pinPulse 2s ease-in-out infinite;
+}
+
+@keyframes pinPulse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+.animate-pin-ring-1 {
+  animation: pinRing 2.5s ease-out infinite;
+}
+
+.animate-pin-ring-2 {
+  animation: pinRing 2.5s ease-out 0.5s infinite;
+}
+
+@keyframes pinRing {
+  0% { transform: scale(0.8); opacity: 0.3; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+
+/* ═══════════════════════════════════════ */
 /* Background textures                     */
 /* ═══════════════════════════════════════ */
 

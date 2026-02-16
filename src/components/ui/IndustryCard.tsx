@@ -1,10 +1,13 @@
-import { Shield, Plane, Wrench, Car } from "lucide-react";
+import DefenseVehicle from "@/components/svg/DefenseVehicle";
+import AerospaceJet from "@/components/svg/AerospaceJet";
+import IndustrialRoboticArm from "@/components/svg/IndustrialRoboticArm";
+import AutomotiveVehicle from "@/components/svg/AutomotiveVehicle";
 
 const iconMap = {
-  Shield,
-  Plane,
-  Wrench,
-  Car,
+  DefenseVehicle,
+  AerospaceJet,
+  IndustrialRoboticArm,
+  AutomotiveVehicle,
 } as const;
 
 interface IndustryCardProps {
@@ -22,7 +25,7 @@ export default function IndustryCard({
   gradient,
   accent,
 }: IndustryCardProps) {
-  const Icon = iconMap[icon];
+  const Illustration = iconMap[icon];
 
   return (
     <div
@@ -31,8 +34,8 @@ export default function IndustryCard({
       {/* Top accent bar */}
       <div className={`h-[2px] w-10 ${accent} rounded-full mb-5`} />
 
-      {/* Watermark icon */}
-      <Icon className="absolute -bottom-3 -right-3 w-24 h-24 text-white/[0.03] group-hover:text-white/[0.07] transition-all duration-500" strokeWidth={1} />
+      {/* Watermark illustration */}
+      <Illustration className="absolute -bottom-4 -right-4 w-48 h-48 text-white/[0.03] group-hover:text-white/[0.07] transition-all duration-500" />
 
       <h3 className="font-display text-xl font-700 uppercase tracking-wide text-white mb-3">
         {title}

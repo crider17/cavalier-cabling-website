@@ -5,6 +5,7 @@ import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import ContactInfoCard from "@/components/ui/ContactInfoCard";
 import Button from "@/components/ui/Button";
 import { CONTACT } from "@/lib/constants";
+import MichiganOutline from "@/components/svg/MichiganOutline";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -48,6 +49,11 @@ export default function Contact() {
     <>
       {/* Built In Michigan banner */}
       <div className="relative bg-brand-gray-dark py-16 overflow-hidden">
+        {/* Michigan state outline background */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <MichiganOutline className="w-80 md:w-96 h-auto text-white opacity-[0.04]" />
+        </div>
+
         {/* City skyline silhouette */}
         <div className="absolute bottom-0 left-0 right-0 h-24 opacity-[0.04]">
           <svg

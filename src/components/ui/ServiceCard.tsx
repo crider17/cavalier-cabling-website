@@ -1,19 +1,17 @@
-import {
-  Cable,
-  Workflow,
-  Shield,
-  Plug,
-  PenTool,
-  ClipboardCheck,
-} from "lucide-react";
+import CableAssemblyIcon from "@/components/svg/CableAssemblyIcon";
+import WireHarnessIcon from "@/components/svg/WireHarnessIcon";
+import MilSpecConnectorIcon from "@/components/svg/MilSpecConnectorIcon";
+import ConnectorTerminationIcon from "@/components/svg/ConnectorTerminationIcon";
+import EngineeringIcon from "@/components/svg/EngineeringIcon";
+import TestingIcon from "@/components/svg/TestingIcon";
 
 const iconMap = {
-  Cable,
-  Workflow,
-  Shield,
-  Plug,
-  PenTool,
-  ClipboardCheck,
+  CableAssembly: CableAssemblyIcon,
+  WireHarness: WireHarnessIcon,
+  MilSpecConnector: MilSpecConnectorIcon,
+  ConnectorTermination: ConnectorTerminationIcon,
+  Engineering: EngineeringIcon,
+  Testing: TestingIcon,
 } as const;
 
 interface ServiceCardProps {
@@ -34,7 +32,7 @@ export default function ServiceCard({
       {/* Icon + accent line */}
       <div className="flex items-center gap-4 mb-5">
         <div className="w-11 h-11 rounded-xl bg-brand-orange/[0.07] border border-brand-orange/10 flex items-center justify-center shrink-0 group-hover:bg-brand-orange group-hover:border-brand-orange transition-all duration-300">
-          <Icon className="w-5 h-5 text-brand-orange group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
+          <Icon className="w-5 h-5 text-brand-orange group-hover:text-white transition-colors duration-300" />
         </div>
         <div className="h-[1px] flex-1 bg-gradient-to-r from-gray-200 to-transparent" />
       </div>
