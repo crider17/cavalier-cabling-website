@@ -5,7 +5,7 @@ import CertBadge from "@/components/ui/CertBadge";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import { CERTIFICATIONS } from "@/lib/constants";
 
-const delays = ["delay-100", "delay-200", "delay-300", "delay-400"];
+const delays = ["delay-100", "delay-200", "delay-300"];
 
 export default function Certifications() {
   return (
@@ -18,7 +18,7 @@ export default function Certifications() {
           />
         </AnimateOnScroll>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl md:max-w-4xl mx-auto">
+        <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
           {CERTIFICATIONS.items.map((cert, i) => (
             <AnimateOnScroll
               key={cert.title}

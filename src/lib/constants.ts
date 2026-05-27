@@ -122,12 +122,6 @@ export const CERTIFICATIONS = {
       color: "brand-blue",
     },
     {
-      title: "AS 9100:2016",
-      subtitle: "Aerospace Standard",
-      type: "circle" as const,
-      color: "brand-orange",
-    },
-    {
       title: "ITAR",
       subtitle: "Registered",
       type: "shield" as const,
