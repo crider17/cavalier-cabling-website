@@ -24,7 +24,7 @@ export const FEATURES = [
   },
   {
     icon: "Shield" as const,
-    text: "Every assembly we produce is backed by rigorous quality controls, full traceability, and compliance with MIL-SPEC, IPC/WHMA-A-620, and AS9100 standards.",
+    text: "Every assembly we produce is backed by rigorous quality controls, full traceability, and documented process standards.",
   },
 ];
 
@@ -49,7 +49,7 @@ export const SERVICES = {
       icon: "MilSpecConnector" as const,
       title: "MIL-Spec & Aerospace Cabling",
       description:
-        "Cable assemblies built to MIL-DTL-38999, MIL-DTL-26482, and other military specifications with full traceability and compliance documentation.",
+        "Cable assemblies built to MIL-DTL-38999, MIL-DTL-26482, and other military specifications with full traceability and documentation.",
     },
     {
       icon: "ConnectorTermination" as const,
@@ -67,7 +67,7 @@ export const SERVICES = {
       icon: "Testing" as const,
       title: "Testing & Quality Assurance",
       description:
-        "Comprehensive testing including continuity, hi-pot, insulation resistance, and pull force testing with detailed test reports and certifications.",
+        "Comprehensive testing including continuity, hi-pot, insulation resistance, and pull force testing with detailed test reports.",
     },
   ],
 };
@@ -79,7 +79,7 @@ export const INDUSTRIES = {
     {
       title: "Defense",
       description:
-        "Mission-critical cabling for ground vehicles, communications systems, weapon platforms, and field-deployable equipment. ITAR registered.",
+        "Mission-critical cabling for ground vehicles, communications systems, weapon platforms, and field-deployable equipment.",
       icon: "DefenseVehicle" as const,
       gradient: "from-slate-900 via-slate-800 to-slate-900",
       accent: "bg-brand-orange",
@@ -87,7 +87,7 @@ export const INDUSTRIES = {
     {
       title: "Aerospace",
       description:
-        "Flight-qualified cable assemblies for avionics, flight controls, engine systems, and ground support equipment. AS9100 certified.",
+        "Flight-qualified cable assemblies for avionics, flight controls, engine systems, and ground support equipment.",
       icon: "AerospaceJet" as const,
       gradient: "from-blue-950 via-indigo-900 to-blue-950",
       accent: "bg-brand-blue",
@@ -107,31 +107,6 @@ export const INDUSTRIES = {
       icon: "AutomotiveVehicle" as const,
       gradient: "from-stone-800 via-amber-950 to-stone-800",
       accent: "bg-brand-orange",
-    },
-  ],
-};
-
-export const CERTIFICATIONS = {
-  label: "CERTIFICATIONS & COMPLIANCE",
-  heading: "Quality you can verify.",
-  items: [
-    {
-      title: "ISO 9001",
-      subtitle: "Quality Management",
-      type: "circle" as const,
-      color: "brand-blue",
-    },
-    {
-      title: "ITAR",
-      subtitle: "Registered",
-      type: "shield" as const,
-      color: "brand-green",
-    },
-    {
-      title: "IPC/WHMA-A-620",
-      subtitle: "Workmanship Std.",
-      type: "circle" as const,
-      color: "brand-blue",
     },
   ],
 };
@@ -156,8 +131,8 @@ export const CONTACT = {
 export const SEO = {
   title: "Cavalier Cabling LLC | Mil-Spec Cable Assemblies & Wire Harnesses",
   description:
-    "Precision-engineered mil-spec cable assemblies and wire harnesses for defense, aerospace, and high-performance applications. ISO 9001 & AS9100 certified. Port Huron, Michigan.",
+    "Precision-engineered mil-spec cable assemblies and wire harnesses for defense, aerospace, and high-performance applications. Port Huron, Michigan.",
   keywords:
-    "mil-spec cable assemblies, wire harness manufacturer, defense cabling, aerospace cabling, military cable assemblies, custom wire harness, MIL-DTL-38999, AS9100 certified, ITAR registered, Port Huron Michigan",
+    "mil-spec cable assemblies, wire harness manufacturer, defense cabling, aerospace cabling, military cable assemblies, custom wire harness, MIL-DTL-38999, Port Huron Michigan",
   url: "https://cavaliercabling.com",
 };
