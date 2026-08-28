@@ -58,12 +58,6 @@ export const SERVICES = {
         "Precision termination services for D-Sub, circular, rectangular, and custom connectors with optional overmolding for environmental protection.",
     },
     {
-      icon: "Engineering" as const,
-      title: "Engineering & Prototyping",
-      description:
-        "Collaborative design support including DFM analysis, 3D modeling, material selection, and rapid prototyping to validate your designs before production.",
-    },
-    {
       icon: "Testing" as const,
       title: "Testing & Quality Assurance",
       description:

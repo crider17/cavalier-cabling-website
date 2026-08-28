@@ -63,7 +63,6 @@ const jsonLd = {
       "Wire Harness Manufacturing",
       "MIL-Spec & Aerospace Cabling",
       "Connector Termination & Overmolding",
-      "Engineering & Prototyping",
       "Testing & Quality Assurance",
     ],
   },

@@ -5,7 +5,7 @@ import ServiceCard from "@/components/ui/ServiceCard";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import { SERVICES } from "@/lib/constants";
 
-const delays = ["delay-100", "delay-200", "delay-300", "delay-100", "delay-200", "delay-300"];
+const delays = ["delay-100", "delay-200", "delay-300", "delay-100", "delay-200"];
 
 export default function Services() {
   return (
@@ -15,7 +15,7 @@ export default function Services() {
           <SectionHeading label={SERVICES.label} heading={SERVICES.heading} />
         </AnimateOnScroll>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 gap-5">
           {SERVICES.items.map((service, i) => (
             <AnimateOnScroll key={service.title} delay={delays[i]} className="h-full">
               <ServiceCard

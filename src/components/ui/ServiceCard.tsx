@@ -2,7 +2,6 @@ import CableAssemblyIcon from "@/components/svg/CableAssemblyIcon";
 import WireHarnessIcon from "@/components/svg/WireHarnessIcon";
 import MilSpecConnectorIcon from "@/components/svg/MilSpecConnectorIcon";
 import ConnectorTerminationIcon from "@/components/svg/ConnectorTerminationIcon";
-import EngineeringIcon from "@/components/svg/EngineeringIcon";
 import TestingIcon from "@/components/svg/TestingIcon";
 
 const iconMap = {
@@ -10,7 +9,6 @@ const iconMap = {
   WireHarness: WireHarnessIcon,
   MilSpecConnector: MilSpecConnectorIcon,
   ConnectorTermination: ConnectorTerminationIcon,
-  Engineering: EngineeringIcon,
   Testing: TestingIcon,
 } as const;
 
